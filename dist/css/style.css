@@ -1,0 +1,23 @@
+/* Mobile First */
+:root {
+  /* Primary color */
+  --clr-primary-dark: hsl(256, 26%, 20%);
+  --clr-primary-gray: hsl(216, 30%, 68%);
+  /* Neutral Color */
+  --clr-neutral-dark: hsl(270, 9%, 17%);
+  --clr-neutral-gray: hsl(273, 4%, 51%);
+  --clr-neutral-light: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
