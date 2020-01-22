@@ -18,6 +18,235 @@
 }
 
 body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* header */
+.nav {
+  min-height: 5rem;
+}
+
+.nav__list {
+  background-color: var(--clr-neutral-dark);
+  background-image: url(../img/bg-pattern-mobile-nav.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.8, -0.4, 0.2, 1.44) 0s,
+    opacity 0.3s cubic-bezier(0.8, -0.4, 0.2, 1.44) 0s;
+  top: 5rem;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav__list .btn {
+  display: block;
+}
+
+.nav__link {
+  color: var(--clr-neutral-light);
+  text-decoration: none;
+}
+
+.nav__item {
+  list-style: none;
+  margin: 2rem;
+  opacity: 0;
+}
+
+/* burger */
+.nav__burger {
+  border: 3px solid var(--clr-primary-dark);
+  cursor: pointer;
+  display: block;
+  padding: 0.56rem 0.31rem;
+}
+
+.nav__line1,
+.nav__line2,
+.nav__line3 {
+  background-color: var(--clr-primary-dark);
+  height: 3px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  width: 1.5rem;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .nav__line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .nav__line2 {
+  opacity: 0;
+}
+.toggle .nav__line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-neutral-light);
+  position: relative;
+}
+
+.hero .container {
+  position: relative;
+}
+
+.hero__text .btn:hover {
+  background-color: var(--clr-neutral-light);
+  color: var(--clr-primary-dark);
+}
+
+.hero__img {
+  width: 100%;
+  content: url(../img/image-intro-mobile.jpg);
+}
+
+.hero__text > * {
+  margin-bottom: 2rem;
+  margin-right: 0;
+  text-align: center;
+}
+
+/* .hero::after {
+  content: url('../img/bg-pattern-intro-right-mobile.svg');
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.hero::before {
+  content: url('../img/bg-pattern-intro-left-mobile.svg');
+  position: absolute;
+  left: 0;
+  top: 30rem;
+  z-index: 2;
+} */
+
+/* Utility Class */
+.btn {
+  border: 2px solid var(--clr-neutral-light);
+  color: var(--clr-neutral-light);
+  padding: 0.64rem 0.8rem;
+  text-decoration: none;
+  width: 100%;
+}
+
+.btn:hover {
+  color: var(--clr-primary-dark);
+  background-color: var(--clr-neutral-light);
+}
+
+.nav__list-active {
+  transform: translateX(0%);
+}
+
+/* media queries */
+@media only screen and (min-width: 636px) {
+  .nav__burger {
+    display: none;
+  }
+
+  .nav__list {
+    background-color: #fff;
+    background-image: none;
+    height: 100%;
+    position: static;
+    transform: translateX(0);
+  }
+
+  .nav__link {
+    color: var(--clr-neutral-gray);
+    margin-right: 1.25rem;
+  }
+
+  .nav__list .btn {
+    border: 2px solid var(--clr-primary-dark);
+    color: var(--clr-primary-dark);
+    padding: 0.64rem 0.8rem;
+    display: inline;
+  }
+
+  .nav__item {
+    list-style: none;
+    opacity: 1;
+    margin: 0;
+  }
+
+  .nav__link:hover {
+    color: var(--clr-primary-dark);
+  }
+
+  .btn {
+    display: inline;
+  }
+
+  .btn:hover {
+    background-color: var(--clr-primary-dark);
+    color: var(--clr-neutral-light);
+  }
+
+  /* hero section */
+  .hero::after {
+    content: url('../img/bg-pattern-intro-right-desktop.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .hero::before {
+    content: url('../img/bg-pattern-intro-left-desktop.svg');
+    position: absolute;
+    left: 0;
+    top: 30rem;
+    z-index: 2;
+  }
+  .hero__text {
+    /* margin-top: 6.5rem; */
+    margin-right: 2rem;
+  }
+
+  .hero__text > * {
+    text-align: left;
+  }
+
+  .hero__text::before {
+    content: '';
+    height: 2px;
+    width: 13%;
+    background-color: var(--clr-neutral-light);
+    position: absolute;
+    top: 6.5rem;
+  }
+
+  .hero__img {
+    content: url(../img/image-intro-desktop.jpg);
+    position: relative;
+    top: 6.5rem;
+    z-index: 1;
+  }
 }

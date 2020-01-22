@@ -1,8 +1,7 @@
 :root {
   --base-size: 16px;
   --type-scale: 1.65;
-  --h4: calc(var(--base-size) * var(--type-scale));
-  --h3: calc(var(--h4) * var(--type-scale));
+  --h3: calc(var(--base-size) * var(--type-scale));
   --h2: calc(var(--h3) * var(--type-scale));
   --h1: calc(var(--h2) * var(--type-scale));
   --small-text: calc(var(--base-size) / var(--type-scale));
@@ -10,7 +9,7 @@
 
 /* Fonts */
 body {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Karla', sans-serif;
   line-height: 1.65;
 }
 
@@ -18,13 +17,14 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'DM Serif Display', serif;
 }
 
 /* Size */
 
 h1 {
   font-size: var(--h1);
+  line-height: 1.1;
 }
 
 h2 {
@@ -45,4 +45,32 @@ h4 {
 
 p {
   font-size: var(--base-size);
+}
+
+.nav__list a {
+  font-size: 20px;
+}
+
+/* header */
+.nav__link {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+/* Utility Class */
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+@media only screen and (min-width: 636px) {
+  :root {
+    --type-scale: 1.618;
+  }
+
+  .nav__list a {
+    font-size: 16px;
+  }
 }
