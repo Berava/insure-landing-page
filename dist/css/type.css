@@ -1,6 +1,6 @@
 :root {
   --base-size: 16px;
-  --type-scale: 1.65;
+  --type-scale: 1.5;
   --h3: calc(var(--base-size) * var(--type-scale));
   --h2: calc(var(--h3) * var(--type-scale));
   --h1: calc(var(--h2) * var(--type-scale));
@@ -36,7 +36,11 @@ h3 {
 }
 
 h4 {
+  color: var(--clr-neutral-gray);
+  font-family: 'Karla', sans-serif;
   font-size: var(--h4);
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .small-text {
@@ -58,6 +62,32 @@ p {
   letter-spacing: 0.125rem;
 }
 
+/* different section */
+.different p {
+  color: var(--clr-primary-gray);
+}
+
+.different h2 {
+  padding-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.different h3 {
+  margin-bottom: 1rem;
+}
+
+/* work section */
+
+.work h2 {
+  color: var(--clr-neutral-light);
+  line-height: 1;
+  padding-top: 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 23rem;
+  padding: 0 2rem;
+}
+
 /* Utility Class */
 .btn {
   font-weight: 700;
@@ -72,5 +102,9 @@ p {
 
   .nav__list a {
     font-size: 16px;
+  }
+
+  .work h2 {
+    padding: 0;
   }
 }
