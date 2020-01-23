@@ -259,6 +259,11 @@ body {
 }
 
 /* Utility Class */
+.resize-animation-stopper * {
+  animation: none;
+  transition: none;
+}
+
 .btn {
   border: 2px solid var(--clr-neutral-light);
   color: var(--clr-neutral-light);
