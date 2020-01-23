@@ -27,6 +27,10 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
 
 /* header */
 .nav {
@@ -221,6 +225,22 @@ body {
   text-align: center;
 }
 
+/* footer section */
+.footer__sections a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--clr-neutral-dark);
+}
+
+.footer__sections a:hover {
+  text-decoration: underline;
+}
+
+.footer__sections > * {
+  margin-bottom: 2rem;
+}
+
 .footer__social {
   padding-top: 4rem;
   padding-bottom: 2rem;
@@ -228,6 +248,10 @@ body {
 
 .footer__social .logo {
   padding-bottom: 2rem;
+}
+
+.social-icons svg path:hover {
+  fill: var(--clr-primary-dark);
 }
 
 .social-icons li:not(:last-child) {
@@ -258,7 +282,12 @@ body {
   transform: translateX(0%);
 }
 
-/* media queries */
+@media only screen and (min-width: 980px) {
+  .hero__img {
+    top: 6.5rem;
+  }
+}
+
 @media only screen and (min-width: 636px) {
   .nav__burger {
     display: none;
@@ -323,7 +352,7 @@ body {
     position: absolute;
     left: 0;
     top: 30rem;
-    z-index: 2;
+    /* z-index: 2; */
   }
   .hero__text {
     /* margin-top: 6.5rem; */
@@ -349,7 +378,6 @@ body {
   .hero__img {
     content: url(../img/image-intro-desktop.jpg);
     position: relative;
-    top: 6.5rem;
     z-index: 1;
   }
 
