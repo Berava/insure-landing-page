@@ -141,6 +141,7 @@ body {
   margin: 6.25rem 0;
   text-align: center;
   position: relative;
+  z-index: 2;
 }
 
 .hero__img {
@@ -291,6 +292,9 @@ body {
   .hero__img {
     top: 6.5rem;
   }
+  .hero__text {
+    margin-right: 2rem;
+  }
 }
 
 @media only screen and (min-width: 636px) {
@@ -361,7 +365,7 @@ body {
   }
   .hero__text {
     /* margin-top: 6.5rem; */
-    margin-right: 2rem;
+    margin: 0;
     position: static;
     text-align: left;
   }
